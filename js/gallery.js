@@ -88,8 +88,8 @@ galleryList.innerHTML = imageCards;
 
 const onImageCardClick = event => {
     event.preventDefault();
-    if (event.target === event.currentTarget) {
-        return;
+    if (event.target.nodeName !== 'IMG') {
+      return;
     }
 
     const itemDataset = event.target.dataset;
